@@ -21,3 +21,8 @@ The engine automatically generates this 9-panel audit every time it runs:
 - **Languages:** Python 3.x
 - **Libraries:** Pandas (Analytics), BeautifulSoup4 (Scraping), Seaborn (Visualization), Requests (Connectivity).
 - **Architecture:** Modular, Exception-Handled, and Production-Ready.
+## 🧩 Technical Challenges & Resolutions
+- **Challenge:** Inconsistent HTML encoding (e.g., characters like 'Â' appearing in price strings).
+- **Resolution:** Implemented a regex-based cleaning layer to ensure floating-point precision for financial calculations.
+- **Challenge:** Scaling for dynamic stock volume.
+- **Resolution:** Replaced fixed-range loops with a `while True` logic gate that detects the "404 Not Found" signal, allowing the script to scrape 1,000 or 10,000 items without code modification.
